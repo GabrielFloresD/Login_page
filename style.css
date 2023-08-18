@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap');
 
 *, *::after, *::before {
     margin: 0;
@@ -14,12 +14,15 @@
     --color5: #CD8ECC;
     --fontFamilyTitle: 'Hind Siliguri', sans-serif;
     --fontFamilyText: 'Montserrat', sans-serif;
+    --transitionFunction: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 html {
     font-size: 7px;
     font-family: var(--fontFamilyText);
+    font-weight: 400;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 a {
@@ -59,4 +62,71 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.form_h1 {
+    font-size: 5rem;
+    font-family: var(--fontFamilyTitle);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: -3px 3px 5px var(--color1);
+    margin-bottom: 10rem;
+}
+
+.form_h2 {
+    font-size: 2rem;
+    font-family: var(--fontFamilyTitle);
+    font-weight: 400;
+    width: 75%;
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
+    transition: transform .4s, letter-spacing .3s;
+    transition-timing-function: var(--transitionFunction);
+}
+
+.form_h2-focus {
+    letter-spacing: 2px;
+    transform: scale(1.1);
+}
+
+.form_container {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    width: 75%;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--color4);
+    transition: transform .4s var(--transitionFunction);
+}
+
+.form_container-focus {
+    transform: scale(1.1);
+    border-bottom-color: var(--color3);
+}
+
+.container_icon {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: var(--color4);
+    transition: .2s ease-in;
+}
+
+.container_icon-focus {
+    color: var(--color3);
+}
+
+.container_input {
+    padding: 1rem 1.5rem;
+    flex-grow: 1;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-family: var(--fontFamilyText);
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.container_input::placeholder {
+    font-weight: 400;
 }
