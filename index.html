@@ -5,8 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d63180f787.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="background-top"></div>
+    <form id="form">
+        <h1 class="form_h1">Login</h1>
+        <div class="form_container">
+            <h2 class="container_h2">Username</h2>
+            <i class="container_icon fa-solid fa-user"></i>
+            <input type="text" class="container_input" placeholder="Type your username" required>
+        </div>
+        <div class="form_container">
+            <h2 class="container_h2">Password</h2>
+            <i class="container_icon fa-solid fa-lock"></i>
+            <input type="password" class="container_input" placeholder="Type your password" required>
+        </div>
+        <a href="#" class="form_link">Forgot Username or Password?</a>
+        <button type="submit" class="form_submit">Login</button>
+        <div class="form_social">
+            <h4 class="social_h2">Or Sign Up using:</h4>
+            <ul class="social_ul">
+                <li class="social__li">
+                    <a href="#" class="social__li-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social__li">
+                    <a href="#" class="social__li-link">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social__li">
+                    <a href="#" class="social__li-link">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="form_link">Create your Account <i class="fa-solid fa-arrow-right-long"></i></a>
+    </form>
     <script src="index.js"></script>
 </body>
 </html>
