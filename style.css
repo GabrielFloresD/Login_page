@@ -22,7 +22,6 @@ html {
     font-family: var(--fontFamilyText);
     font-weight: 400;
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 a {
@@ -70,7 +69,7 @@ ul {
     font-weight: 700;
     letter-spacing: 2px;
     text-shadow: -3px 3px 5px var(--color1);
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .form_h2 {
@@ -129,4 +128,129 @@ ul {
 
 .container_input::placeholder {
     font-weight: 400;
+}
+
+[class *= "form_link"] {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: .5rem;
+    position: relative;
+}
+
+.form_link {
+    transition: transform .5s, color .2s;
+    transition-timing-function: var(--transitionFunction);
+}
+
+.form_link-first {
+    margin-bottom: 2rem;
+    transition: color .2s var(--transitionFunction);
+}
+
+[class *= "form_link"]::before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: var(--color2);
+    position: absolute;
+    bottom: 0;
+    transition: width .5s var(--transitionFunction);
+}
+
+.form_link-first::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: var(--color2);
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transition: width .5s var(--transitionFunction);
+}
+
+.form_link::before {
+    left: 0;
+}
+
+.form_link-first::before {
+    left: 50%;
+}
+
+.form_link:hover::before {
+    width: 100%;
+}
+
+.form_link-first:hover::before,
+.form_link-first:hover::after {
+    width: 50%;
+}
+
+.form_link:hover {
+    color: var(--color2);
+    transform: translateX(1.5rem);
+}
+
+.form_link-first:hover {
+    color: var(--color2);
+}
+
+.form_submit {
+    width: 75%;
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 5rem;
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: var(--fontFamilyTitle);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4rem;
+    background-color: var(--color3);
+    transition: background-color .25s, transform .5s, box-shadow .25s;
+    transition-timing-function: var(--transitionFunction);
+}
+
+.form_submit:hover {
+    background-color: var(--color2);
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
+}
+
+.form_submit:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+}
+
+.form_social {
+    width: 75%;
+}
+
+.social_h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.social_ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    margin: 1.5rem 0 3rem;
+}
+
+.social__li-link {
+    width: 6rem;
+    height: 6rem;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    border-radius: 50%;
+    color: var(--color4);
+    background-color: var(--color1);
+    transition: transform .5s var(--transitionFunction);
+}
+
+.social__li-link:hover {
+    transform: translateY(-.7rem);
+    background: linear-gradient(to top, var(--color2), var(--color1));
 }
