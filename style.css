@@ -320,15 +320,45 @@ ul {
     }
 }
 
+@media screen and (min-width: 600px) and (min-height: 950px) {
+    body {
+        height: 100vh;
+    }
+
+    #form {
+        width: 75%;
+        justify-content: space-around;
+    }
+}
+
 @media screen and (min-width: 750px) {
     #form {
         width: 50%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 700px) and (min-height: 1000px) {
+    html {
+        font-size: 9px;
+    }
+
+    #form {
+        width: 65%;
     }
 }
 
 @media screen and (min-width: 800px) {
     html {
         font-size: 9px;
+    }
+}
+
+@media screen and (min-width: 800px) and (min-height: 1150px) {
+    #form {
+        width: 65%;
+        height: 70%;
+        justify-content: space-around;
     }
 }
 
